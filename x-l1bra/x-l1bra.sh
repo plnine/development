@@ -41,7 +41,7 @@ echo
 }
 
 celestia(){
-echo
+source <(curl -s https://raw.githubusercontent.com/plnine/development/main/x-l1bra/nodes/celestia/main.sh)
 }
 
 defund(){
