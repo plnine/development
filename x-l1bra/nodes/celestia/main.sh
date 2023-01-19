@@ -9,11 +9,11 @@ mainmenu() {
     echo -ne "
 $(yellowprint 'DEFUND')
 $(greenprint   '1)') Установить
-$(
-$(yellowprint  '2)') Обновить
-$(redprint     '3)') Удалить
-$(magentaprint '4)') Помощь
-$(blueprint    '5)') Вернутся назад
+$(cyanprint    '2)') Управление
+$(yellowprint  '3)') Обновить
+$(redprint     '4)') Удалить
+$(magentaprint '5)') Информация
+$(blueprint    '6)') Вернутся назад
 $(redprint     '0)') Выйти
 Введите цифру:  "
    read -r ans
@@ -22,17 +22,23 @@ $(redprint     '0)') Выйти
         install
         ;;
     2)
+        control
+        ;;
+    3)
         update
         ;;
-    3)  
+    4)  
     	delet
     	;;
-    4)
-        help
+    5)
+        info
+        ;;
+    6)
+        back
         ;;
     0)
         echo $(cyanprint '"Bye bye."')
-        exit 0
+        exit 
         ;;
     *)
         clear
