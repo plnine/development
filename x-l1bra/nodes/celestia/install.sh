@@ -29,7 +29,7 @@ $(redprint     '2)') Нет
     esac
 }
 no(){
-source <(https://raw.githubusercontent.com/plnine/development/main/x-l1bra/nodes/celestia/main.sh)
+source <(curl -s https://raw.githubusercontent.com/plnine/development/main/x-l1bra/nodes/celestia/main.sh)
 }
 
 yes(){
@@ -148,3 +148,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable celestia-appd
 sudo systemctl start celestia-appd
 }
+
+mainmenu
